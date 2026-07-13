@@ -1,103 +1,86 @@
-<!-- ================= CONTACT ================= -->
+// ========= Typing Animation =========
 
-<section id="contact">
+const words = [
+  "Frontend Developer",
+  "Web Designer",
+  "Freelancer",
+  "UI Developer"
+];
 
-<div class="heading">
-<h2>Contact Me</h2>
-<p>Let's Build Something Amazing</p>
-</div>
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
-<div class="contact-container">
+const typing = document.getElementById("typing");
 
-<div class="contact-info glass">
+function typeEffect() {
+  if (!typing) return;
 
-<h3>Get In Touch</h3>
+  const current = words[wordIndex];
 
-<p><i class="fa-solid fa-envelope"></i> your@email.com</p>
+  if (!deleting) {
+    typing.textContent = current.substring(0, charIndex++);
+    if (charIndex > current.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1200);
+      return;
+    }
+  } else {
+    typing.textContent = current.substring(0, charIndex--);
+    if (charIndex < 0) {
+      deleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  }
 
-<p><i class="fa-solid fa-phone"></i> +91 XXXXXXXXXX</p>
+  setTimeout(typeEffect, deleting ? 50 : 120);
+}
 
-<p><i class="fa-solid fa-location-dot"></i> Uttar Pradesh, India</p>
-
-<div class="social-links">
-
-<a href="#"><i class="fab fa-github"></i></a>
-
-<a href="#"><i class="fab fa-linkedin"></i></a>
-
-<a href="#"><i class="fab fa-instagram"></i></a>
-
-<a href="#"><i class="fab fa-facebook"></i></a>
-
-</div>
-
-</div>
-
-<div class="contact-form glass">
-
-<form id="contact-form">
-
-<input
-type="text"
-id="name"
-placeholder="Your Name"
-required>
-
-<input
-type="email"
-id="email"
-placeholder="Your Email"
-required>
-
-<input
-type="text"
-id="subject"
-placeholder="Subject">
-
-<textarea
-id="message"
-rows="7"
-placeholder="Your Message"
-required></textarea>
-
-<button type="submit" class="btn">
-
-Send Message
-
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
+typeEffect();
 
 
+// ========= EmailJS =========
 
-<footer>
+emailjs.init({
+  publicKey: "N3w7iiXyHpdFCbKdx"
+});
 
-<h2>Sachin Yadav</h2>
+const form = document.getElementById("contact-form");
 
-<p>
+if (form) {
+  form.addEventListener("submit", function (e) {
 
-Made with ❤️ using HTML CSS JavaScript
+    e.preventDefault();
 
-</p>
+    emailjs.send(
+      "service_rmghs6a",
+      "template_uza7q4g",
+      {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+      }
+    )
+    .then(() => {
+      alert("✅ Message Sent Successfully!");
+      form.reset();
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("❌ Error: " + error.text);
+    });
 
-<p>
+  });
+}
 
-© 2026 All Rights Reserved
 
-</p>
+// ========= Navbar Active Link =========
 
-</footer>
+const links = document.querySelectorAll("nav a");
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    links.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
