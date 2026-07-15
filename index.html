@@ -1,1 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sachin Yadav - AI & ML Engineer Portfolio" />
+  <meta name="keywords" content="Sachin Yadav, AI ML Engineer, Portfolio, Web Developer, Python, Machine Learning" />
+  <meta name="author" content="Sachin Yadav" />
+  <meta name="theme-color" content="#070816" />
+  <meta property="og:title" content="Sachin Yadav | AI & ML Engineer" />
+  <meta property="og:description" content="Modern 3D portfolio of Sachin Yadav." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sachinyadav.online/" />
+  <title>Sachin Yadav | AI & ML Engineer</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+  <canvas id="particleCanvas"></canvas>
+  <div class="noise"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container">
+      <a href="#home" class="brand">
+        <span class="brand-mark">S</span>
+        <span class="brand-name">Sachin<span>.</span></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <a href="#contact" class="nav-cta magnetic">Let's Talk <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-orb orb-a"></div>
+      <div class="hero-orb orb-b"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="availability">
+            <span></span>
+            Available for internships & projects
+          </div>
+
+          <p class="eyebrow">HELLO, I'M</p>
+          <h1 class="hero-title">
+            <span>Sachin</span>
+            <span class="gradient-text">Yadav</span>
+          </h1>
+
+          <div class="role-line">
+            <span>I build</span>
+            <strong id="typedText"></strong>
+            <i>|</i>
+          </div>
+
+          <p class="hero-description">
+            Aspiring AI & Machine Learning engineer focused on creating intelligent,
+            useful and visually premium digital experiences.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary magnetic">Explore My Work <span>↗</span></a>
+            <a href="#contact" class="btn secondary">Contact Me <span>→</span></a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat glass">
+              <div><strong data-count="10">0</strong><span>+</span></div>
+              <p>Projects Built</p>
+            </div>
+            <div class="stat glass">
+              <div><strong data-count="6">0</strong><span>+</span></div>
+              <p>Core Skills</p>
+            </div>
+            <div class="stat glass">
+              <div><strong data-count="100">0</strong><span>%</span></div>
+              <p>Learning Mindset</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="visual-stage" id="visualStage">
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+
+            <div class="floating-chip chip-1"><span>&lt;/&gt;</span> HTML</div>
+            <div class="floating-chip chip-2"><span>Py</span> Python</div>
+            <div class="floating-chip chip-3"><span>AI</span> Machine Learning</div>
+
+            <div class="profile-card glass" id="profileCard">
+              <div class="card-shine"></div>
+
+              <div class="profile-top">
+                <div class="avatar">SY</div>
+                <div>
+                  <h3>Sachin Yadav</h3>
+                  <p>AI & ML Engineer</p>
+                </div>
+              </div>
+
+              <div class="code-window">
+                <div class="window-top"><span></span><span></span><span></span></div>
+<pre><code><b>class</b> Sachin:
+  <em>def</em> __init__(self):
+    self.role = <q>"AI Engineer"</q>
+    self.focus = [
+      <q>"Machine Learning"</q>,
+      <q>"Problem Solving"</q>,
+      <q>"Web Development"</q>
+    ]
+
+  <em>def</em> future(self):
+    <b>return</b> <q>"Build. Learn. Grow."</q></code></pre>
+              </div>
+
+              <div class="profile-footer">
+                <span><i></i> Open to opportunities</span>
+                <span>India</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-1">⚡ Fast Learner</div>
+            <div class="floating-badge badge-2">✦ Creative Builder</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down">Scroll <span></span></a>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-glow left"></div>
+      <div class="container">
+        <div class="section-heading reveal">
+          <p>01 / ABOUT ME</p>
+          <h2>Turning curiosity into <span class="gradient-text">real products.</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass tilt reveal">
+            <div class="avatar-ring">
+              <div class="big-avatar">SY</div>
+            </div>
+            <div class="learning-badge"><span></span> Learning every day</div>
+            <div class="decor-lines"><i></i><i></i><i></i></div>
+          </div>
+
+          <div class="about-copy reveal">
+            <h3>I love creating technology that feels simple, smart and meaningful.</h3>
+            <p>
+              I'm Sachin Yadav, a B.Tech CSE student specializing in Artificial Intelligence
+              and Machine Learning. My long-term goal is to become a world-class software
+              engineer and build products used by millions of people.
+            </p>
+            <p>
+              I enjoy programming, web development, problem solving and understanding how
+              modern AI systems work. I believe consistency, curiosity and strong fundamentals
+              can turn ambitious goals into reality.
+            </p>
+
+            <div class="about-points">
+              <div class="about-point">
+                <span>01</span>
+                <div><h4>Problem Solver</h4><p>I break complex challenges into clear steps.</p></div>
+              </div>
+              <div class="about-point">
+                <span>02</span>
+                <div><h4>Continuous Learner</h4><p>I actively improve my technical and communication skills.</p></div>
+              </div>
+              <div class="about-point">
+                <span>03</span>
+                <div><h4>Future Focused</h4><p>I build today with a clear vision of tomorrow.</p></div>
+              </div>
+            </div>
+
+            <a href="#contact" class="text-link">Let's build something amazing <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-glow right"></div>
+      <div class="container">
+        <div class="section-heading reveal">
+          <p>02 / EXPERTISE</p>
+          <h2>Skills I use to create <span class="gradient-text">digital impact.</span></h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card glass tilt reveal">
+            <div class="skill-icon">HTML</div>
+            <h3>HTML5</h3>
+            <p>Semantic, accessible and SEO-friendly website structure.</p>
+            <span>Advanced</span>
+          </article>
+          <article class="skill-card glass tilt reveal">
+            <div class="skill-icon">CSS</div>
+            <h3>CSS3</h3>
+            <p>Responsive layouts, animations, glassmorphism and 3D effects.</p>
+            <span>Advanced</span>
+          </article>
+          <article class="skill-card glass tilt reveal">
+            <div class="skill-icon">JS</div>
+            <h3>JavaScript</h3>
+            <p>Interactive interfaces, DOM logic and dynamic experiences.</p>
+            <span>Intermediate</span>
+          </article>
+          <article class="skill-card glass tilt reveal">
+            <div class="skill-icon">PY</div>
+            <h3>Python</h3>
+            <p>Automation, fundamentals, data handling and AI foundations.</p>
+            <span>Intermediate</span>
+          </article>
+          <article class="skill-card glass tilt reveal">
+            <div class="skill-icon">AI</div>
+            <h3>AI & ML</h3>
+            <p>Learning machine learning models and practical data workflows.</p>
+            <span>Learning</span>
+          </article>
+          <article class="skill-card glass tilt reveal">
+            <div class="skill-icon">DSA</div>
+            <h3>DSA</h3>
+            <p>Building problem-solving ability through structured practice.</p>
+            <span>Learning</span>
+          </article>
+        </div>
+
+        <div class="skills-progress reveal">
+          <div class="progress-item">
+            <div><span>Frontend Development</span><b>88%</b></div>
+            <div class="track"><i data-width="88"></i></div>
+          </div>
+          <div class="progress-item">
+            <div><span>Python Programming</span><b>82%</b></div>
+            <div class="track"><i data-width="82"></i></div>
+          </div>
+          <div class="progress-item">
+            <div><span>Problem Solving</span><b>76%</b></div>
+            <div class="track"><i data-width="76"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading split reveal">
+          <div>
+            <p>03 / SELECTED WORK</p>
+            <h2>Projects built with <span class="gradient-text">purpose.</span></h2>
+          </div>
+          <p class="heading-note">A selection of ideas that demonstrate design, development and problem-solving skills.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card featured reveal">
+            <div class="project-visual gradient-one">
+              <div class="browser">
+                <div class="browser-bar"><span></span><span></span><span></span><i>sachinyadav.online</i></div>
+                <div class="browser-body">
+                  <div class="preview-nav"></div>
+                  <div class="preview-lines"><span></span><span></span><span></span></div>
+                  <div class="preview-orb"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-copy">
+              <span class="project-number">01</span>
+              <p class="project-tags">WEB DESIGN • FRONTEND</p>
+              <h3>Premium Portfolio Website</h3>
+              <p>A responsive portfolio with modern animations, glassmorphism, 3D interactions and EmailJS contact functionality.</p>
+              <div class="tech-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>EmailJS</span></div>
+              <a href="https://www.sachinyadav.online/" target="_blank" rel="noopener">View Live Project ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual gradient-two">
+              <div class="dashboard">
+                <div class="dash-side"></div>
+                <div class="dash-main">
+                  <div class="dash-head"></div>
+                  <div class="dash-cards"><span></span><span></span><span></span></div>
+                  <div class="dash-chart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-copy">
+              <span class="project-number">02</span>
+              <p class="project-tags">UI CONCEPT • DASHBOARD</p>
+              <h3>AI Analytics Dashboard</h3>
+              <p>A futuristic dashboard concept for model performance, data insights and productivity metrics.</p>
+              <div class="tech-list"><span>UI/UX</span><span>JavaScript</span><span>Charts</span></div>
+              <a href="#contact">Request Demo ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual gradient-three">
+              <div class="phone">
+                <div class="phone-speaker"></div>
+                <div class="phone-screen">
+                  <div class="app-head"></div>
+                  <div class="app-hero"></div>
+                  <div class="app-list"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-copy">
+              <span class="project-number">03</span>
+              <p class="project-tags">PRODUCT DESIGN • MOBILE</p>
+              <h3>Smart Learning App</h3>
+              <p>A student-focused learning experience for skills, goals and coding progress.</p>
+              <div class="tech-list"><span>Product</span><span>UI Design</span><span>Prototype</span></div>
+              <a href="#contact">Explore Concept ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey-section" id="journey">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p>04 / JOURNEY</p>
+          <h2>My path toward becoming a <span class="gradient-text">great engineer.</span></h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          <article class="timeline-item reveal">
+            <div class="marker"></div>
+            <div class="timeline-date">2026</div>
+            <div class="timeline-card glass">
+              <span>CURRENT</span>
+              <h3>B.Tech CSE — AI & ML</h3>
+              <p>Building foundations in programming, mathematics, computer science and AI technologies.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="marker"></div>
+            <div class="timeline-date">NEXT</div>
+            <div class="timeline-card glass">
+              <span>FOCUS</span>
+              <h3>DSA & Real-World Projects</h3>
+              <p>Strengthening algorithms and development skills through practice and meaningful projects.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="marker"></div>
+            <div class="timeline-date">GOAL</div>
+            <div class="timeline-card glass">
+              <span>VISION</span>
+              <h3>Global Software Engineer</h3>
+              <p>Contributing to impactful products and solving challenging engineering problems.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-orb one"></div>
+      <div class="contact-orb two"></div>
+
+      <div class="container">
+        <div class="contact-wrapper glass">
+          <div class="contact-copy reveal">
+            <p class="section-label">05 / CONTACT</p>
+            <h2>Have an idea? Let's create something <span class="gradient-text">remarkable.</span></h2>
+            <p>Send me a message for collaborations, internships, freelance projects or a friendly conversation.</p>
+
+            <div class="contact-details">
+              <a href="mailto:your-email@example.com">
+                <span>✉</span>
+                <div><small>Email</small><strong>your-email@example.com</strong></div>
+              </a>
+              <div>
+                <span>⌖</span>
+                <div><small>Location</small><strong>Uttar Pradesh, India</strong></div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="from_name">Your Name</label>
+                <input id="from_name" name="from_name" type="text" placeholder="Enter your name" required />
+              </div>
+              <div class="form-group">
+                <label for="reply_to">Your Email</label>
+                <input id="reply_to" name="reply_to" type="email" placeholder="Enter your email" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="What would you like to discuss?" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn magnetic" id="submitBtn">
+              <span class="button-text">Send Message</span>
+              <span class="button-icon">↗</span>
+              <span class="loader"></span>
+            </button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">S</span>
+        <span class="brand-name">Sachin<span>.</span></span>
+      </a>
+      <p>© <span id="currentYear"></span> Sachin Yadav. All rights reserved.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
